@@ -59,6 +59,7 @@ ENFORCE_HTTPS_PERMANENT = parse_boolean(
 ENFORCE_FILE_SAVE = parse_boolean(
     os.environ.get("REDASH_ENFORCE_FILE_SAVE", "true"))
 
+USE_SECURE_COOKIES = parse_boolean(os.environ.get("REDASH_USE_SECURE_COOKIES", str(ENFORCE_HTTPS)))
 COOKIE_SECRET = os.environ.get(
     "REDASH_COOKIE_SECRET", "c292a0a3aa32397cdb050e233733900f")
 # Whether the session cookie is set to secure.
